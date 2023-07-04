@@ -1,13 +1,24 @@
-import java.util.*;
+import java.util.Scanner;
 public class Reverse_String {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the string : ");
         String st=sc.next();
-        int i=st.length()-1;
+        StringBuffer sbfr = new StringBuffer(st);
+        sbfr.reverse();
+        
+        String rev=sbfr.toString();
+        System.out.println(rev);
+        method2();
+    }
+    public static void method2(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the string : ");
+        String st=sc.next();
         String rev="";
-        while(i!=-1){
+        for(int i=st.length()-1;i>=0;i--){
             rev=rev+st.charAt(i);
-            i--;
+
         }
         System.out.println(rev);
     }
